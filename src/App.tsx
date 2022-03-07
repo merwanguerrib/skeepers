@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route, Outlet } from 'react-router-dom';
-const ENDPOINT_RANDOM_USERS = 'https://randomuser.me/api/?results=20';
+import Home from './componets/Home';
 
 const Container = () => (
   <div className='app'>
@@ -10,9 +10,6 @@ const Container = () => (
   </div>
 );
 
-const Home = () => (
-  <>Get 20 users from ENDPOINT_RANDOM_USERS and display them: name only.</>
-);
 
 const User = () => (
   <>
