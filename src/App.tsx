@@ -4,7 +4,7 @@ import Home from './componets/Home';
 
 const Container = () => (
   <div className='app'>
-    <div className='container'>
+    <div className='columns is-multiline'>
       <Outlet />
     </div>
   </div>
