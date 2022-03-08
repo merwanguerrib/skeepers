@@ -20,8 +20,8 @@ const handleClick = () => {
           </div>
           <footer className="card-footer">
             <div className="card-footer-item">
-            <button className="button is-responsive" onClick={handleClick}>
-              <span className="icon is-small">
+            <button className="button" onClick={handleClick}>
+              <span className="icon-text is-small">
                 <i className="fas fa-pen"></i>
               </span>
               <span>Edit</span>
