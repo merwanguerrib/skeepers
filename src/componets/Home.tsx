@@ -1,18 +1,10 @@
 import React, { useState, useEffect, Fragment } from 'react'
+import { User } from '../commonTypes/user';
+import UserCard from './UserCard';
 const ENDPOINT_RANDOM_USERS = 'https://randomuser.me/api/?results=20';
 
 
 function Home():JSX.Element {
-  type User = {
-    name:{
-      title: string;
-      first: string;
-      last: string;
-    };
-    login:{
-      uuid:string
-    }
-  }
   const [users, setUsers] = useState<User[]>([])
 
   const fetchUsers = async () => {
@@ -29,15 +21,14 @@ function Home():JSX.Element {
 
   useEffect(() => {
     fetchUsers()
-    console.table(users)
       },[users])
 
   return (
     <Fragment>
       {
-      users.map((user: { name: { title: string; first: string; last: string; }, login:{uuid:string} }) => { 
+      users.map((user:User) => { 
         return(
-        <div key={user.login.uuid}><p>{user.name.title} {user.name.first} {user.name.last}</p></div>
+        <UserCard {...user} key={user.login.uuid} />
         )
       })
       }
