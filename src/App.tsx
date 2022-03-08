@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route, Outlet } from 'react-router-dom';
-import Home from './componets/Home';
+import Home from './components/Home';
+import User from './components/User';
 
 const Container = () => (
   <div className='app'>
@@ -8,14 +9,6 @@ const Container = () => (
       <Outlet />
     </div>
   </div>
-);
-
-
-const User = () => (
-  <>
-    Display here the full content of 1 user from the 20: name, location and
-    email and make them editable (in the dom only)
-  </>
 );
 
 const App = () => (
