@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Home from './components/Home';
-import User from './components/User';
+import {User} from './components/User';
 
 const Container = () => (
   <div className='app'>
@@ -12,10 +12,10 @@ const Container = () => (
 );
 
 const App = () => (
-  <Routes>
+   <Routes>
     <Route path='/' element={<Container />}>
       <Route index element={<Home />} />
-      <Route path='*' element={<User />} />
+      <Route path='/user' element={<User />} />
     </Route>
   </Routes>
 );
