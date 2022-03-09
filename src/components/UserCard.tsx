@@ -1,12 +1,13 @@
-import { UserType } from '../commonTypes/user';
-import User from './User';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { userType } from '../commonTypes/userType';
 
-function UserCard(user:UserType):JSX.Element {
-const handleClick = () => {
-  return (
-    <User {...user}/>
-  )
-}
+
+function UserCard(user:userType):JSX.Element {
+useEffect(() => {
+
+}, [])
+
   return (
     <div className="column is-one-fifth">
       <div className="card">
@@ -20,12 +21,11 @@ const handleClick = () => {
           </div>
           <footer className="card-footer">
             <div className="card-footer-item">
-            <button className="button" onClick={handleClick}>
-              <span className="icon-text is-small">
-                <i className="fas fa-pen"></i>
-              </span>
-              <span>Edit</span>
+            <Link to={"/user"} state={user}>
+            <button className="button">
+              View
               </button>
+            </Link>
             </div>
           </footer>
         </div>
