@@ -16,11 +16,18 @@
 .icon {
   justify-content: flex-start;
 }
+.card-footer-item:not(:last-child) {
+  border-left: none;
+}
+.paddingLeft {
+  padding-left: 10px;
+}
 
 .vc-center {
   position: absolute;
   top: 50%;
   left: 50%;
+  margin: 25px;
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
