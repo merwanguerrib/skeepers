@@ -1,8 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { userType } from "../commonTypes/userType";
 import EditMode from "./EditMode";
 import ViewMode from "./ViewMode";
+import { Button } from "./sharedComponents/Button";
 
 export const User = (): JSX.Element => {
   const location = useLocation();
@@ -33,6 +34,12 @@ export const User = (): JSX.Element => {
   const handleSave = () => {
     setEditMode(false);
   };
+  const handleEdit = () => {
+    setEditMode(true);
+  };
+  useEffect(() => {
+    console.log(editMode);
+  }, [editMode]);
 
   return (
     <Fragment>
@@ -52,26 +59,14 @@ export const User = (): JSX.Element => {
           </div>
           <footer className="card-footer">
             {editMode ? (
-              <p className=" card-footer-item">
-                <button
-                  className="button is-success"
-                  onClick={() => handleSave()}
-                >
-                  <span className="icon ">
-                    <i className="fas fa-check"></i>
-                  </span>
-                  <span className="paddingLeft">Save</span>
-                </button>
-              </p>
+              <Button
+                icon={"check"}
+                success={"is-success"}
+                handleClick={handleSave}
+                text={"Save"}
+              />
             ) : (
-              <p className=" card-footer-item">
-                <button className="button" onClick={() => setEditMode(true)}>
-                  <span className="icon ">
-                    <i className="fas fa-pen"></i>
-                  </span>
-                  <span className="paddingLeft">Edit</span>
-                </button>
-              </p>
+              <Button icon={"pen"} handleClick={handleEdit} text={"Edit"} />
             )}
           </footer>
         </div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { userType } from "../commonTypes/userType";
+import { Button } from "./sharedComponents/Button";
 
 function UserCard(user: userType): JSX.Element {
   return (
@@ -18,7 +19,7 @@ function UserCard(user: userType): JSX.Element {
         <footer className="card-footer">
           <div className="card-footer-item">
             <Link to={"/user"} state={user}>
-              <button className="button">View</button>
+              <Button icon={"info"} text={"View"} />
             </Link>
           </div>
         </footer>
