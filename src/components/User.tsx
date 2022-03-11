@@ -1,9 +1,10 @@
-import React, { Fragment, useState } from "react";
+import { Fragment, useState } from "react";
 import { useLocation } from "react-router";
 import { userType } from "../commonTypes/userType";
 import EditMode from "./EditMode";
 import ViewMode from "./ViewMode";
 import { Button } from "./sharedComponents/Button";
+import { Link } from "react-router-dom";
 
 export const User = (): JSX.Element => {
   const location = useLocation();
@@ -63,7 +64,12 @@ export const User = (): JSX.Element => {
                 text={"Save"}
               />
             ) : (
-              <Button icon={"pen"} handleClick={handleEdit} text={"Edit"} />
+              <div className="card-footer-item">
+                <Button icon={"pen"} handleClick={handleEdit} text={"Edit"} />
+                <Link to={"/skeepers"}>
+                  <Button icon={"arrow-right-from-bracket"} text={"Back"} />
+                </Link>
+              </div>
             )}
           </footer>
         </div>
