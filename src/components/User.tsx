@@ -37,9 +37,6 @@ export const User = (): JSX.Element => {
   const handleEdit = () => {
     setEditMode(true);
   };
-  useEffect(() => {
-    console.log(editMode);
-  }, [editMode]);
 
   return (
     <Fragment>
