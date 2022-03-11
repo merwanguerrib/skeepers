@@ -17,4 +17,4 @@ Here is the [github page](https://merwanguerrib.github.io/skeepers) of my app.
 
 ## Author
 
-- [**Merwan Guerrib**](https://github.com/merwanguerrib)
+- [**Merwan Guerrib**](https://www.linkedin.com/in/merwanguerrib/)
