@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useState } from "react";
 import { useLocation } from "react-router";
 import { userType } from "../commonTypes/userType";
 import EditMode from "./EditMode";
