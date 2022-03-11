@@ -13,6 +13,7 @@ Here is the [github page](https://merwanguerrib.github.io/skeepers) of my app.
 - [Bulma](https://bulma.io/) - Open source Framework CSS (front-end)
 - [Typescript](https://www.typescriptlang.org/) - Typing syntax for JS
 - [React](https://fr.reactjs.org/) - JS Library
+- [Fontawesome](https://fontawesome.com/) - Icon Library
 
 ## Author
 
